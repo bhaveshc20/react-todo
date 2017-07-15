@@ -7,7 +7,7 @@ var TodoList = React.createClass({
     var renderTodos = () => {
       if(todos.length === 0){
         return (
-          <p className="container__message">Nothing To Do</p>
+          <h5 className="container__message animated fadeInRight">Nothing To Do</h5>
         );
       }
       return todos.map((todo) => {
@@ -18,7 +18,7 @@ var TodoList = React.createClass({
     };
 
     return(
-      <div>
+      <div className="container">
         {renderTodos()}
       </div>
     )

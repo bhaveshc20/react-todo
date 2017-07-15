@@ -1,5 +1,6 @@
 var React = require('react');
 var moment = require('moment');
+import { Button, Card, Row, Col, Input } from 'react-materialize';
 
 var Todo = React.createClass({
   render: function(){
@@ -20,10 +21,10 @@ var Todo = React.createClass({
       <div className={todoClassName} onClick={() => {
           this.props.onToggle(id);
         }}>
-        <div><input type="checkbox" checked={completed}/></div>
-        <div><p>{text}</p>
+        <div className="row animated fadeInLeft"><div className="col s6"><Input name="group1" type="checkbox" label={text} checked={completed} defaultValue="checked" /></div>
+        <div className="col s6">
         <p className="todo__subtext">{renderDate()}</p></div>
-
+</div>
       </div>
     )
   }

@@ -5,6 +5,7 @@ var TodoSearch = require('TodoSearch');
 var TodoAPI = require('TodoAPI');
 var uuid = require('node-uuid');
 var moment = require('moment');
+import { Button, Card, Row, Col, Input } from 'react-materialize';
 
 var TodoApp = React.createClass({
   getInitialState: function(){
@@ -54,10 +55,9 @@ var TodoApp = React.createClass({
 
     return (
       <div>
-        <h1 className="page-title">Todo App</h1>
+        <h1 className="page-title">Focus-It</h1>
         <div className="row">
-          <div className="column small-centered small-11 medium-6 large-5">
-
+          <div className="Col s={12} m={6} l={2}">
           <div className="container">
             <TodoSearch onSearch={this.handleSearch}/>
             <TodoList todos={filteredTodos} onToggle={this.handleToggle}/>

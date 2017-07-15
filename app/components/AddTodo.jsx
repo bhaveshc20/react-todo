@@ -1,4 +1,5 @@
 var React = require('react');
+import { Button, Card, Row, Col } from 'react-materialize';
 
 var AddTodo = React.createClass({
     handleSubmit: function(e){
@@ -17,10 +18,12 @@ var AddTodo = React.createClass({
     },
     render: function() {
         return (
-            <div className="container__footer">
+            <div className="container center">
                 <form ref="form" onSubmit={this.handleSubmit}>
-                  <input type="text" ref="todoText" placeholder="What do you need to do?"></input>
-                  <button className="button expanded">Add todo</button>
+                  <div className="input-field">
+                  <input className="validate" type="text" ref="todoText" placeholder="What do you need to do?"></input>
+                  </div>
+                  <Button floating large pulse className="orange darken-1" waves="light" icon="add"/>
                 </form>
             </div>
 
